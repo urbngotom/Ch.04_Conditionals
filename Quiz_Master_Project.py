@@ -145,7 +145,11 @@ else:
     letter_grade = "F"
 
 print("")
-print("Congratulations! You finished the quiz! You got", score, "out of", str(question_num)+". Your final score is", str(percentage_grade)+".", "You earned a", letter_grade+"!")
-if letter_grade == "F":
-    print("You failed. Go back to elementary!")
+print("Congratulations! You finished the quiz! You got", score, "out of", str(question_num)+". Your final score is", str(round(percentage_grade, 1))+"%.")
+if letter_grade == "A":
+    print("You earned an A!")
+elif letter_grade == "B" or letter_grade == "C" or letter_grade == "D":
+    print("You earned a", letter_grade+"!")
+else:
+    print("You earned an F. You failed. Go back to elementary!")
 
